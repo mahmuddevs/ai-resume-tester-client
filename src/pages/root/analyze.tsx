@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { getFetch } from "../../utils/getFetch"
 
-export default function About() {
+export default function Analyze() {
   const handleClick = async () => {
     const res = await getFetch('/new', { private: true })
     console.log(res)

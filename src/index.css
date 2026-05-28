@@ -2,19 +2,29 @@
 
 :root {
   /* Premium Brand Colors */
-  --color-primary: #4f46e5;         /* Deep Royal Indigo */
-  --color-primary-hover: #4338ca;   /* Dark Indigo */
-  --color-secondary: #0ea5e9;       /* Ocean Cyan */
-  --color-accent: #f59e0b;          /* Warm Gold */
-  --color-success: #10b981;         /* Emerald Green */
-  --color-danger: #ef4444;          /* Soft Crimson Red */
-  
+  --color-primary: #4f46e5;
+  /* Deep Royal Indigo */
+  --color-primary-hover: #4338ca;
+  /* Dark Indigo */
+  --color-secondary: #0ea5e9;
+  /* Ocean Cyan */
+  --color-accent: #f59e0b;
+  /* Warm Gold */
+  --color-success: #10b981;
+  /* Emerald Green */
+  --color-danger: #ef4444;
+  /* Soft Crimson Red */
+
   /* Neutral Palette */
-  --color-background: #f8fafc;      /* Extremely clean slate background */
+  --color-background: #f8fafc;
+  /* Extremely clean slate background */
   --color-card: #ffffff;
-  --color-text-main: #0f172a;       /* Premium Dark Grey */
-  --color-text-muted: #475569;      /* Slate Grey */
-  --color-border: #e2e8f0;          /* Subtle Grey border */
+  --color-text-main: #0f172a;
+  /* Premium Dark Grey */
+  --color-text-muted: #475569;
+  /* Slate Grey */
+  --color-border: #e2e8f0;
+  /* Subtle Grey border */
 }
 
 @theme {
@@ -24,37 +34,45 @@
   --color-brand-accent: var(--color-accent);
   --color-brand-success: var(--color-success);
   --color-brand-danger: var(--color-danger);
-  
+
   --color-brand-bg: var(--color-background);
   --color-brand-card: var(--color-card);
   --color-brand-text: var(--color-text-main);
   --color-brand-text-muted: var(--color-text-muted);
   --color-brand-border: var(--color-border);
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-}
 
-@layer utilities {
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-slide-in-left: slide-in-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
-  @keyframes pulseSubtle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.85; }
-  }
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+    }
 
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .animate-pulse-subtle {
-    animation: pulseSubtle 2s ease-in-out infinite;
+    to {
+      transform: translateX(0);
+    }
   }
 }
 
 /* Base Headings Style using Tailwind @apply */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-sans text-brand-text mt-0 mb-2 leading-tight;
 }
 
@@ -80,4 +98,40 @@ h5 {
 
 h6 {
   @apply text-sm md:text-base font-medium;
+}
+
+
+
+@layer utilities {
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes pulseSubtle {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
 }

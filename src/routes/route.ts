@@ -1,13 +1,16 @@
 import { createBrowserRouter, redirect } from "react-router";
+import React from "react";
 import Home from "../pages/root/home";
 import Root from "../layouts/root";
 import Auth from "../layouts/auth";
 import Login from "../pages/auth/login";
 import Register from "../pages/auth/register";
 import AppLayout from "../layouts/app";
-import About from "../pages/root/about";
 import Dashboard from "../pages/dashboard/dashboard";
 import DashboardLayout from "../layouts/dashboard";
+import Analyze from "../pages/root/analyze";
+
+import ProtectedRoute from "./protected-route";
 
 export const router = createBrowserRouter([
   {
@@ -22,8 +25,8 @@ export const router = createBrowserRouter([
             Component: Home,
           },
           {
-            path: "/about",
-            Component: About,
+            path: "/analyze",
+            Component: () => React.createElement(ProtectedRoute, null, React.createElement(Analyze)),
           },
         ],
       },
