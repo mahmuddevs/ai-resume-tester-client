@@ -66,6 +66,10 @@
   }
 }
 
+body {
+  @apply font-sans;
+}
+
 /* Base Headings Style using Tailwind @apply */
 h1,
 h2,
@@ -98,6 +102,18 @@ h5 {
 
 h6 {
   @apply text-sm md:text-base font-medium;
+}
+
+.cont {
+  @apply w-11/12 max-w-7xl mx-auto
+}
+
+.sec-padding {
+  @apply py-12 md:py-24
+}
+
+.sec-margin {
+  @apply my-12 md:my-24
 }
 
 

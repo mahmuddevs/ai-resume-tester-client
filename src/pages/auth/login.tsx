@@ -8,6 +8,7 @@ import { getFetch } from '../../utils/getFetch';
 import useAuthStore, { type User } from '../../store/authStore';
 import { Link, useLocation } from 'react-router';
 import { LockIcon, EnvelopeSimpleIcon, WarningCircleIcon, CircleNotchIcon, EyeIcon, EyeSlashIcon } from '@phosphor-icons/react';
+import Logo from '../../components/logo';
 
 interface LoginFormInputs {
   email: string;
@@ -71,7 +72,7 @@ export default function Login() {
   };
 
   return (
-    <section className="min-h-screen w-screen grid grid-cols-1 lg:grid-cols-12 font-sans antialiased overflow-hidden bg-slate-50">
+    <section className="min-h-screen w-screen grid grid-cols-1 lg:grid-cols-12 antialiased overflow-hidden bg-slate-50">
       
       {/* LEFT SIDE PANEL - Premium Feature Showcase (Hidden on Mobile/Tablet) */}
       <div className="hidden lg:flex lg:col-span-5 relative bg-slate-950 flex-col justify-between p-12 text-white overflow-hidden border-r border-slate-900">
@@ -84,13 +85,8 @@ export default function Login() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35" />
 
         {/* Brand Header */}
-        <div className="relative z-10 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-tr from-brand-primary to-brand-secondary text-white shadow-lg shadow-indigo-500/20">
-            <LockIcon className="h-5 w-5" />
-          </div>
-          <span className="text-lg font-bold text-white tracking-tight">
-            ResuMetrics AI
-          </span>
+        <div className="relative z-10">
+          <Logo light={true} />
         </div>
 
         {/* Feature Highlights Mockup */}
@@ -129,7 +125,7 @@ export default function Login() {
 
         {/* Footnote */}
         <div className="relative z-10 text-xs text-slate-500">
-          © {new Date().getFullYear()} ResuMetrics AI. All rights reserved.
+          © {new Date().getFullYear()} ResuRefactor AI. All rights reserved.
         </div>
       </div>
 

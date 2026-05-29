@@ -27,7 +27,7 @@ export default function MobileMenu() {
 
 
   return (
-    <div className="md:hidden font-sans">
+    <div className="md:hidden">
       {/* Mobile Menu Trigger Button */}
       <button
         onClick={() => setIsOpen(true)}

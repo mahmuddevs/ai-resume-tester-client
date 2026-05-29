@@ -8,7 +8,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
         <SparkleIcon className="h-5 w-5 fill-white" />
       </div>
       <span className={`text-base font-extrabold tracking-tight transition-colors duration-300 ${light ? 'text-white group-hover:text-slate-200' : 'text-brand-text group-hover:text-brand-primary'}`}>
-        ResuMetrics <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-secondary">AI</span>
+        ResuRefactor <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-secondary">AI</span>
       </span>
     </Link>
   );

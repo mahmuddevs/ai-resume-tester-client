@@ -10,8 +10,8 @@ export default function Header() {
   const { isAuthenticated, loading } = useAuthStore();
 
   return (
-    <header className="sticky top-0 w-full bg-white/75 backdrop-blur-lg border-b border-brand-border/40 z-100 transition-all duration-300 font-sans">
-      <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
+    <header className="sticky top-0 w-full bg-white/75 backdrop-blur-lg border-b border-brand-border/40 z-100 transition-all duration-300">
+      <div className="cont h-18 flex items-center justify-between">
 
         {/* Left Side - Logo */}
         <div className="shrink-0">

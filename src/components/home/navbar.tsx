@@ -9,7 +9,7 @@ export default function Navbar() {
   const visibleLinks = navLinks.filter((navLink) => !navLink.requiresAuth || isAuthenticated);
 
   return (
-    <nav className="flex items-center gap-8 font-sans">
+    <nav className="flex items-center gap-8">
       {visibleLinks.map((navLink) => (
         <NavLink
           key={navLink.link}

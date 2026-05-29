@@ -44,7 +44,7 @@ export default function Avatar() {
   };
 
   return (
-    <div className="relative font-sans" ref={containerRef}>
+    <div className="relative" ref={containerRef}>
       {/* Round trigger button */}
       <button
         onClick={() => setDropdownOpen((prev) => !prev)}
