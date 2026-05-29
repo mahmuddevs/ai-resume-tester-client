@@ -69,11 +69,11 @@ export default function ImprovementsList({ weaknesses = [], improvements = [] }:
   };
 
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
       {/* WEAKNESSES COLUMN (Column span 5) */}
-      <div className="lg:col-span-5 bg-white/60 backdrop-blur-xl border border-brand-border/40 p-8 sm:p-10 rounded-3xl shadow-xl space-y-6 flex flex-col justify-start relative overflow-hidden h-full">
-        <div className="absolute top-0 right-0 -mt-6 -mr-6 w-20 h-20 bg-brand-danger/5 rounded-full blur-xl pointer-events-none" />
+      <div className="lg:col-span-5 bg-white/60 backdrop-blur-xl border border-brand-border/40 p-8 sm:p-10 rounded-3xl shadow-xl space-y-6 flex flex-col justify-start relative overflow-hidden items-start self-start">
+        <div className="absolute top-0 right-0 -mt-6 -mr-6 w-20 h-20 bg-brand-danger/5 rounded-full blur-xl pointer-events-none " />
 
         <div className="space-y-1">
           <h3 className="text-lg font-extrabold text-brand-text tracking-tight flex items-center gap-2">

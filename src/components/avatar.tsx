@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router";
+// import { Link } from "react-router";
 import useAuthStore from "../store/authStore";
 import { getFetch } from "../utils/getFetch";
-import { SignOutIcon, LayoutIcon, ChartBarIcon } from "@phosphor-icons/react";
+import { SignOutIcon } from "@phosphor-icons/react";
 
 export default function Avatar() {
   const { user, setUser, loading: userLoading } = useAuthStore();
@@ -67,7 +67,7 @@ export default function Avatar() {
           </div>
 
           {/* Navigation Links */}
-          <div className="py-1">
+          {/* <div className="py-1">
             <Link
               to="/dashboard"
               onClick={() => setDropdownOpen(false)}
@@ -84,7 +84,7 @@ export default function Avatar() {
               <ChartBarIcon className="w-4 h-4" />
               <span>View Reports</span>
             </Link>
-          </div>
+          </div> */}
 
           <div className="border-t border-brand-border/40 my-1" />
 
