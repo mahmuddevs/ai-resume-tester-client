@@ -76,8 +76,9 @@ const makeRequest = async (
   isPrivate: boolean,
   body?: unknown
 ): Promise<Response> => {
+  const isFormData = body instanceof FormData;
   const requestHeaders: Record<string, string> = {
-    "Content-Type": "application/json",
+    ...(isFormData ? {} : { "Content-Type": "application/json" }),
     ...headers,
   };
 
@@ -85,7 +86,7 @@ const makeRequest = async (
     method,
     headers: requestHeaders,
     credentials: isPrivate ? "include" : "same-origin",
-    body: body ? JSON.stringify(body) : null,
+    body: isFormData ? (body as FormData) : (body ? JSON.stringify(body) : null),
   });
 };
 
